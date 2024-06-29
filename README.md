@@ -116,14 +116,25 @@ The project comes with a unit test that runs four test
 
 *Note: You may consider the exercise solved if you achieve 15 or 20 points, since this is already a good variance reduction. However, the autograding will show a failure unless you reach the full 22 points.*
 
-## Working in Eclipse
+## Importing in Eclipse from GitHub
 
 Import this git repository into Eclipse and start working.
 
 - Click on the link to your repository (the link starts with qntlb/numerical-methods… )
 - Click on “Clone or download” and copy the URL to your clipboard.
-- Go to Eclipse and select File -> Import -> Git -> Projects from Git.
+- Go to Eclipse and select File -> Import -> Git -> Projects from Git **(with smart import)**.
 - Select “Clone URI” and paste the GitHub URL from step 2.
-- Select “master”, then Next -> Next
-- In the Wizard for Project Import select “Import existing Eclipse projects”, then Next -> Finish
+- Select “master” or "main", then Next -> Next -> Finish.
 
+Note: If you choose "Projects from Git" without the option "(with smart import)" you may expience that
+the project is not imported into Eclipse, but it was successfully checked out via git, i.e. you
+find the project files in you local git folder. In that case, you can import the project "as maven project"
+(see below).
+
+### Importing in Eclipse (as Maven Project)
+
+If you checked out the git repository manually (`git clone`), then import
+the local git folder as Maven Project;
+
+- File -> Import -> Maven -> Existing Maven Projects
+- Select the project folder in you *local* git folder.
