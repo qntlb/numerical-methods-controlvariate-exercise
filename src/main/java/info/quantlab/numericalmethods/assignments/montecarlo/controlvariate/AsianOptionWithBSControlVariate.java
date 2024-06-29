@@ -109,12 +109,13 @@ public class AsianOptionWithBSControlVariate implements AssetMonteCarloProduct {
 		 * Now work on the second part.
 		 * 
 		 * Part 2: add a control variate of the Asian option here
+		 * (replace the following line with a better calculation of valuesControled). 
+		 * 
 		 */
+		RandomVariable valuesControlled = values;
+
 		
-		RandomVariable valuesControled = values;
-		
-		
-		return valuesControled;
+		return valuesControlled;
 	}
 }
 
