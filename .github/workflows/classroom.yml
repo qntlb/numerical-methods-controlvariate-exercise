@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    name: Autograding
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean install --file pom.xml -DskipTests=true
   autograding:
-    name: Autograding
+    name: Testing and Autograding
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -25,8 +25,6 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: '17'
-      - name: Build with Maven
-        run: mvn -B package --file pom.xml -DskipTests=true
       - name: Testing your Application (Autograding)
         uses: education/autograding@v1
         
