@@ -26,7 +26,7 @@ The payoff of the Asian call option is $\max\left(\frac{1}{n} \sum_{i=1}^{n} S(T
 The payoff of the Asian put option is $\max\left(K - \frac{1}{n} \sum_{i=1}^{n} S(T_i),0\right)$, paid at $T$, where $T_i$ are the times in `timesForAveraging`, $n$ is the number of times in `timesForAveraging`, $T$ is `maturity`, and $K$ is `strike`.
 
 Your implementation should cover call and put options by implementing the payoff
-$\max\left(\operatorname{sign} \cdot \left(\frac{1}{n} \sum_{i=1}^{n} S(T_i) - K\right),0\right)$, paid at $T$, where $T_i$ are the times in `timesForAveraging`, $n$ is the number of times in `timesForAveraging`, $T$ is `maturity`, $K$ is `strike`, and `sign` is either $+1$ or $-1$.
+$\max\left(\mathrm{sign} \cdot \left(\frac{1}{n} \sum_{i=1}^{n} S(T_i) - K\right),0\right)$, paid at $T$, where $T_i$ are the times in `timesForAveraging`, $n$ is the number of times in `timesForAveraging`, $T$ is `maturity`, $K$ is `strike`, and `sign` is either $+1$ or $-1$.
 
 And most importantly:
 
