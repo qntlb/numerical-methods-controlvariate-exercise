@@ -65,19 +65,20 @@ public class AsianOptionWithBSControlVariate implements AssetMonteCarloProduct {
 	}
 
 	/**
-	 * This method returns the value random variable of the product within the specified model, evaluated at a given evalutationTime.
-	 * Note: For a lattice this is often the value conditional to evalutationTime, for a Monte-Carlo simulation this is the (sum of) value discounted to evaluation time.
+	 * This method returns the proto-value random variable of the product within the specified model, evaluated at a given evalutationTime.
+	 * A proto-value is a random variable \( V^{*}(t) \) such that the t-conditional expectation E( V^{*}(t) | F_{t} ) represents the value at evaluation time.
+	 *
 	 * Cashflows prior evaluationTime are not considered.
 	 *
 	 * @param evaluationTime The time on which this products value should be observed.
 	 * @param model The model used to price the product.
-	 * @return The random variable representing the value of the product discounted to evaluation time
+	 * @return A random variable \( V^{*}(t) \) such that the t-conditional expectation E( V^{*}(t) | F_{t} ) represents the value of the product at evaluation time
 	 * @throws net.finmath.exception.CalculationException Thrown if the valuation fails, specific cause may be available via the <code>cause()</code> method.
 	 */
 	@Override
 	public RandomVariable getValue(final double evaluationTime, final AssetModelMonteCarloSimulationModel model) throws CalculationException {
 
-		// Inital values to zero
+		// Initial values to zero
 		RandomVariable values = model.getRandomVariableForConstant(0.0);
 
 		
