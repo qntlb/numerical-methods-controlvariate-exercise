@@ -11,6 +11,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<junit.jupiter.version>5.6.2</junit.jupiter.version>
 		<lecture.version>0.1.4-SNAPSHOT</lecture.version>
+		<!-- libs -->
 		<finmath-lib.version>6.1.8</finmath-lib.version>
 		<finmath-plot.version>0.5.8</finmath-plot.version>
 		<!-- maven plugins -->
@@ -146,13 +147,6 @@
 	</dependencies>
 
 	<repositories>
-		<!--
-		<repository>
-			<id>github</id>
-			<name>GitHub qntlb Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/qntlb/numerical-methods-computerarithmetic-exercise</url>
-		</repository>
-		 -->
 		<repository>
 			<id>lecture-maven-repo</id>
 			<url>https://raw.githubusercontent.com/qntlb/numerical-methods-lecture/master/local-maven-repo</url>
