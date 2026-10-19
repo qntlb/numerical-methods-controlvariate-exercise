@@ -1,4 +1,4 @@
-### Maven related files
+# Maven build and release files
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -9,12 +9,21 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
-### Java template
+# Java compiler output and JVM crash logs
 *.class
+hs_err_pid*
 
-### Eclipse related files
+# IntelliJ IDEA (project files are generated when importing Maven projects)
+.idea/
+*.iml
+*.ipr
+*.iws
+/out/
+
+# Eclipse (project files are generated when importing Maven projects)
+.classpath
+.project
 .settings/
-/.classpath
-/.project
-/.settings/
+
+# macOS metadata
 .DS_Store
